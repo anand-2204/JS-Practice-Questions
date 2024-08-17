@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css
+    ">
+    <link rel="stylesheet" href="style5.css">
+    </head>
+  <body>
+    <header>
+        <div class="logo">
+          <h3>Light<br><span>Code</span>
+        </h3>
+      </div>
+        <nav>
+        
+      
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">Dropdown<i class="fas fa-caret-down"></i></a>
+              <div class="dropdown">
+                <ul>
+                  <li><a href="Q1.html">Question1</a></li>
+                  <li><a href="Q2.html">Question2</a></li>
+                  <li><a href="Q3.html">Question3</a></li>
+                  <li><a href="Q4.html">Question4</a></li>
+                  <li><a href="Q5.html">Question5</a></li>
+                  <li><a href="Q6.html">Question6</a></li>
+  
+                </ul>
+            </div>
+            </li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        
+      </nav>
+    </header>
+    <main> 
+      <section>
+        
+    <div class="container">
+        <div class="Input">
+          <h3>ARRAY=[10,20,30,40,50,60,70,80,90,100]</h3>
+          <input type="number" id="number" />
+        </div>
+        <div class="action">
+          <h4>click to find all smaller no. than you have entered</h4>
+  
+          <button onclick="smallerNo()">click</button>
+          <h4>click to find all larger no. than you have entered</h4>
+          <button onclick="largerNo()">click</button>
+        </div>
+  
+        <div class="result">
+          <h3 id="answer"></h3>
+        </div>
+      </div>
+      <script>
+        function smallerNo() {
+          const arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+          const newArr = [];
+  
+          const num = document.getElementById("number");
+          for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < parseInt(num.value)) {
+              newArr.push(arr[i]);
+              document.getElementById("answer").innerHTML = newArr;
+            }
+          }
+        }
+  
+        function largerNo() {
+          const arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+          const newArr = [];
+  
+          const num = document.getElementById("number");
+          for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > parseInt(num.value)) {
+              newArr.push(arr[i]);
+              document.getElementById("answer").innerHTML = newArr;
+            }
+          }
+        }
+      </script>
+      </section>
+    </main>
+  </body>
+</html>

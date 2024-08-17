@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css
+    ">
+    <link rel="stylesheet" href="style3.css">
+    </head>
+  <body>
+    <header>
+        <div class="logo">
+          <h3>Light<br><span>Code</span>
+        </h3>
+      </div>
+        <nav>
+        
+      
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">Dropdown<i class="fas fa-caret-down"></i></a>
+              <div class="dropdown">
+                <ul>
+                  <li><a href="Q1.html">Question1</a></li>
+                  <li><a href="Q2.html">Question2</a></li>
+                  <li><a href="Q3.html">Question3</a></li>
+                  <li><a href="Q4.html">Question4</a></li>
+                  <li><a href="Q5.html">Question5</a></li>
+                  <li><a href="Q6.html">Question6</a></li>
+  
+                </ul>
+            </div>
+            </li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        
+      </nav>
+    </header>
+    <main> 
+      <section>
+        
+    <div class="values">
+        <input type="number" placeholder="Enter First number" id="number1" />
+        <input type="number" placeholder="Enter second number" id="number2" />
+      </div>
+  
+      <div class="Action">
+        <button onclick="Add()">Add</button>
+        <button onclick="Sub()">Subtract</button>
+        <button onclick="Mul()">Multiply</button>
+        <button onclick="Div()">Division</button>
+      </div>
+      <div class="answer">
+        <h4>Answer</h4>
+        <h3 id="answer"></h3>
+      </div>
+      <script>
+        function Add() {
+          const num1 = document.getElementById("number1");
+          const num2 = document.getElementById("number2");
+  
+          document.getElementById("answer").innerHTML =
+            parseInt(num1.value) + parseInt(num2.value);
+        }
+        function Sub() {
+          const num1 = document.getElementById("number1");
+          const num2 = document.getElementById("number2");
+  
+          document.getElementById("answer").innerHTML =
+            parseInt(num1.value) - parseInt(num2.value);
+        }
+        function Mul() {
+          const num1 = document.getElementById("number1");
+          const num2 = document.getElementById("number2");
+  
+          document.getElementById("answer").innerHTML =
+            parseInt(num1.value) * parseInt(num2.value);
+        }
+        function Div() {
+          const num1 = document.getElementById("number1");
+          const num2 = document.getElementById("number2");
+  
+          document.getElementById("answer").innerHTML =
+            parseInt(num1.value) / parseInt(num2.value);
+        }
+      </script>
+    
+      </section>
+    </main>
+  </body>
+</html>

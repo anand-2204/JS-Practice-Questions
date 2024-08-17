@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css
+    ">
+    <link rel="stylesheet" href="style1.css">
+    </head>
+  <body>
+    <header>
+        <div class="logo">
+          <h3>Light<br><span>Code</span>
+        </h3>
+      </div>
+        <nav>
+        
+      
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">Dropdown<i class="fas fa-caret-down"></i></a>
+              <div class="dropdown">
+                <ul>
+                  <li><a href="Q1.html">Question1</a></li>
+                  <li><a href="Q2.html">Question2</a></li>
+                  <li><a href="Q3.html">Question3</a></li>
+                  <li><a href="Q4.html">Question4</a></li>
+                  <li><a href="Q5.html">Question5</a></li>
+                  <li><a href="Q6.html">Question6</a></li>
+  
+                </ul>
+            </div>
+            </li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        
+      </nav>
+    </header>
+    <main> 
+      <section>
+        
+    
+    <div class="container">
+        <h3>Enter a number</h3>
+      <input type="number" id="num"/>
+    </div>
+
+    <div class="action">
+        <button  onclick="table()">submit</button>
+    </div>
+
+    <div id="Table">
+    <h3>Table</h3>
+    </div>
+    <script>
+        function table() {
+          const number = document.getElementById("num");
+          const table = document.getElementById("Table");
+          for (let i = 1; i <= 10; i++) {
+              let p = document.createElement('li');
+            p.textContent = number.value*i;
+            table.appendChild(p);
+        }
+           
+        }
+      </script>
+
+      </section>
+    </main>
+  </body>
+</html>
