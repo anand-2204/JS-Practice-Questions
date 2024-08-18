@@ -8,17 +8,18 @@
     width: 400px;
     height: 100px;
     
-    align-content: center;
+    display: flex;
+    flex-direction: column;
     margin: 20px auto;
   }
-  .values input {
-    margin: 20px 10px;
+  .values #number1, #number2 {
+    margin: auto;
     padding: 5px;
   }
   .Action {
     width: 300px;
     height: 50px;
-    border: 1px solid;
+    
     margin: auto;
     
     display: flex;
@@ -32,7 +33,11 @@
     border: none;
     outline: none;
   border-radius: 10px;
-cursor: pointer;
+
+}
+.Action button:hover{
+  cursor: pointer;
+  background: green;
 }
   
   .answer {
