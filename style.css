@@ -80,10 +80,8 @@ height: 200px;
 
 
 @media screen and (min-width:320px ) and (max-width: 480px){
-header{
-    
-    flex-direction: column;
-    height: 150px;
+.logo{
+    display: none;
 }
 nav{
     justify-content:space-between ;
