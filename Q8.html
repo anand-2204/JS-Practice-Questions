@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    
+     <link rel="stylesheet" href="style8.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css
     ">
-    
     </head>
   <body>
     <header>
@@ -37,7 +36,6 @@
                 <li><a href="Q9.html">Question9</a></li>
                 <li><a href="Q10.html">Question10</a></li>
                 <li><a href="Q11.html">Question11</a></li>
-
               </ul>
             </div>
             </li>
@@ -48,7 +46,34 @@
     </header>
     <main> 
       <section>
-
+        <div class="container">
+          <div class="Input">
+            <h3>Delete a sub-array from a given array</h3>
+          <h3>ARRAY=[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]</h3>
+        <input type="number" id="number1" placeholder="Enter start position">
+        <input type="number" id="number2" placeholder="Enter end position">
+            </div>
+    
+        <div class="action">  
+        <button onclick="del()">click</button></div>
+        <div class="result">
+        
+          <h3 id="answer"> </h3>
+        </div>
+          <script>
+            function del(){
+              const arr=[10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+              const num1 = document.getElementById("number1");
+              const num2 = document.getElementById("number2");
+              
+              
+              arr.splice(num1.value-1, num2.value-1);
+               
+            
+            
+               document.getElementById("answer").innerHTML= arr;
+            }
+</script>
       </section>
     </main>
   </body>

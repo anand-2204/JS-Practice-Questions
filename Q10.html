@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    
+    <link rel="stylesheet" href="style10.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css
     ">
-    
     </head>
   <body>
     <header>
@@ -37,7 +36,6 @@
                 <li><a href="Q9.html">Question9</a></li>
                 <li><a href="Q10.html">Question10</a></li>
                 <li><a href="Q11.html">Question11</a></li>
-
               </ul>
             </div>
             </li>
@@ -48,7 +46,40 @@
     </header>
     <main> 
       <section>
+        <div class="container">
+          
+         <div class="Input">
+          <h3>Adding element of first array in second array at required position.</h3>
+            <h3>ARRAY=[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]</h3>
+            <h3>ARRAY=[11, 22, 33, 44, 55, 66, 77, 88, 99, 110]</h3>
+            <input type="number" id="number1" placeholder="Enter element of 1 array">
+            <input type="number" id="number2" placeholder="Enter position">
+        </div>
+        <div class="action">  
+        <button onclick="INSERT()">click</button></div>
+        <div class="result">
+          <h3 id="answer"> hello</h3>
+        </div>
+          <script>
+            function INSERT(){
+              
+               const arr1 =[10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+               const arr2 =[11, 22, 33, 44, 55, 66, 77, 88, 99, 110];
+               const num1 = document.getElementById("number1");
+               const num2 = document.getElementById("number2"); 
+               
+                const target = num2.value-1;
+            for(let i=9; i>=target;i--){
+                       arr2[i+1] = arr2[i]
+            }
+                      arr2[target]= num1.value ;
+                      
 
+                   document.getElementById("answer").innerHTML = arr2;
+                 
+
+            }
+</script>
       </section>
     </main>
   </body>

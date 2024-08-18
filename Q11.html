@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style11.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css
     ">
@@ -38,6 +39,7 @@
                 <li><a href="Q10.html">Question10</a></li>
                 <li><a href="Q11.html">Question11</a></li>
 
+
               </ul>
             </div>
             </li>
@@ -48,7 +50,36 @@
     </header>
     <main> 
       <section>
-
+          <div class="container">
+            <div class="Input">
+                <h3> Find the Factorial of a number  </h3>
+                <input type="number" placeholder="Enter a number" id="number">
+            </div>
+            <div class="action">
+                <button onclick="factorial()">click</button>
+            </div>
+            <div class="result">
+                <h3 id="answer"></h3>
+            </div>
+          </div>
+          <script>
+            function factorial(){
+                const num  = document.getElementById("number");
+                if(num.value < 0){
+                   document.getElementById("answer").innerHTML= "Negative number do not have factorial value!";
+                }
+                else if (num.value ==0){
+                    document.getElementById("answer").innerHTML= "factorial of 0 is:" +1;
+                }
+                else{
+                    var fact = 1;
+                    for(let i=1;i<=num.value;i++){
+                        fact*=i;
+                    }
+                    document.getElementById("answer").innerHTML= `factorial of ${num.value} is ${fact}`;
+                }
+            }
+          </script>
       </section>
     </main>
   </body>
